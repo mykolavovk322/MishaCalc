@@ -28,4 +28,10 @@ public class MishaCalc implements Calc {
         }
         return fraction;
     }
+
+    @Override
+    public double exponentiate(int baseNumber, int power) {
+        System.out.println("Using exponentiate method");
+        return Math.pow(baseNumber, power);
+    }
 }
