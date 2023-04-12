@@ -16,9 +16,12 @@ public class MishaCalc implements Calc {
     }
 
     public int divide(int numerator, int denominator) {
-        if (denominator == 0) {
-            throw new ArithmeticException("You cant divide by zero");
+        int fraction = 0;
+        try {
+            fraction = numerator / denominator;
+        } catch (ArithmeticException e) {
+            System.out.println("You cant divide by zero");
         }
-        return numerator / denominator;
+        return fraction;
     }
 }
