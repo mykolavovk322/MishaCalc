@@ -1,6 +1,8 @@
-package org.example;
+package org.example.calculator.impl;
 
-public class Calc {
+import org.example.calculator.Calc;
+
+public class MishaCalc implements Calc {
     public int add(int parameter1, int parameter2) {
         return parameter1 + parameter2;
     }
@@ -13,10 +15,10 @@ public class Calc {
         return parameter1 * parameter2;
     }
 
-    public int divide(int parameter1, int parameter2) {
-        if (parameter2 == 0) {
+    public int divide(int numerator, int denominator) {
+        if (denominator == 0) {
             throw new ArithmeticException("You cant divide by zero");
         }
-        return parameter1 / parameter2;
+        return numerator / denominator;
     }
 }
